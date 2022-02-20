@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Grid, Typography, Button, Link } from "@mui/material";
 
-type Props = {}
+type Props = {};
 
-const WelcomeScreen: React.FC= () => {
+const WelcomeScreen: React.FC = () => {
   return (
-    <div><img src="bg.jpg"></img></div>
-  )
-}
+    <Grid container>
+      <RouterLink to="birds"></RouterLink>
+    </Grid>
+  );
+};
 
-export default WelcomeScreen
+export default WelcomeScreen;

@@ -1,20 +1,15 @@
+import { Grid } from "@mui/material";
 import React from "react";
+import BirdCardList from "../components/BirdCardList/BirdCardList";
+import dummyData from "../components/BirdCardList/dummyData.json";
 import {
   BirdDetailsHeader,
   BirdDetailsHeaderTitle,
 } from "../components/BirdDetailsHeader/BirdDetailsHeader";
 import { Bird } from "../types/Bird";
 
-const BirdDetails: React.FC<Bird> = (props) => {
-  return (
-    <BirdDetailsHeader>
-      <BirdDetailsHeaderTitle
-        location={props.birdLocation}
-        lat={props.lat}
-        lng={props.lng}
-      />
-    </BirdDetailsHeader>
-  );
+const BirdDetails: React.FC = (props) => {
+  return <Grid container></Grid>;
 };
 
 export default BirdDetails;
