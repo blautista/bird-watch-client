@@ -4,11 +4,13 @@ import "./App.css";
 import BirdDetails from "./pages/BirdDetails";
 import MainPage from "./pages/MainPage";
 import WelcomeScreen from "./pages/WelcomeScreen";
+import ScrollToTop from "./components/helper/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/birds" element={<MainPage />} />

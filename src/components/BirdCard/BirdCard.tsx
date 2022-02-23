@@ -1,3 +1,6 @@
+/* eslint-disable react/react-in-jsx-scope -- Unaware of jsxImportSource */
+/** @jsxImportSource @emotion/react */
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Bird } from "../../types/Bird";
@@ -9,6 +12,8 @@ import {
   Typography,
   ImageListItem,
 } from "@mui/material";
+import { css } from "@emotion/react";
+
 type Props = {
   birdData: Bird;
   onClick: Function;
