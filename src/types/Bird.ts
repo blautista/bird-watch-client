@@ -8,6 +8,6 @@ export interface Bird {
   observedAt: string;
   lat: number;
   lng: number;
-  wikiInfo: WikiInfo;
-  recordings: Recording[];
+  wikiInfo?: WikiInfo;
+  recordings?: Recording[];
 }
