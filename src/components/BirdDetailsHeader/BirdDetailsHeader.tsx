@@ -22,7 +22,7 @@ export const BirdDetailsHeaderTitle: React.FC<TitleProps> = ({
 
 export const BirdDetailsHeader: React.FC<HeaderProps> = ({ children }) => {
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Toolbar variant="dense">
         <Grid container justifyContent="flex-start">
           {children}
