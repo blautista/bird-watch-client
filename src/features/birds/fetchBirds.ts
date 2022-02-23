@@ -1,7 +1,7 @@
 import { BirdServerResponse } from "../../types/BirdServerResponse"
 
 export const fetchBirds = async (coords: {lat: number, lng: number}) => {
-  const url = `/api/birds?lat=${coords.lat}&lng=${coords.lng}`;
+  const url = `https://bird-watch-server.herokuapp.com/api/birds?lat=${coords.lat}&lng=${coords.lng}`;
   try {
     const res = await fetch(url);
     const data = await res.json();
