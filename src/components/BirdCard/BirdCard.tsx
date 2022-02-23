@@ -18,12 +18,14 @@ const BirdCard = ({ birdData }: Props) => {
     <ImageListItem key={birdData.birdSciName}>
       <Card>
         <CardActionArea>
-          <CardMedia
-            component="img"
-            width="100%"
-            image={birdData.wikiInfo.image}
-            alt={birdData.birdSciName}
-          ></CardMedia>
+          {birdData.wikiInfo && (
+            <CardMedia
+              component="img"
+              width="100%"
+              image={birdData.wikiInfo.image}
+              alt={birdData.birdSciName}
+            ></CardMedia>
+          )}
           <CardContent>
             <Typography variant="h3">{birdData.birdName}</Typography>
             <Typography variant="subtitle2">{birdData.birdSciName}</Typography>

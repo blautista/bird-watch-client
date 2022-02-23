@@ -1,9 +1,9 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-// import birdsReducer from '../features/birds/birdSlice';
+import birdsReducer from '../features/birds/birdSlice';
 
 export const store = configureStore({
   reducer: {
-    
+    birds: birdsReducer
   },
 });
 

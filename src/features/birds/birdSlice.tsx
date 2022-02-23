@@ -8,16 +8,17 @@ import { fetchBirds } from "./fetchBirds";
 import { UserLocation } from "../../types/UserLocation";
 import { Bird } from "../../types/Bird";
 import { BirdServerResponse } from "../../types/BirdServerResponse";
+import { RootState, AppThunk } from "../../store";
 
-interface State {
-  userLocation: UserLocation | {};
-  birdsArray: Bird[] | [];
+export interface State {
+  userLocation: UserLocation | null;
+  birdsArray: Bird[] | null;
   status: "idle" | "loading";
 }
 
 const initialState: State = {
-  birdsArray: [],
-  userLocation: {},
+  birdsArray: null,
+  userLocation: null,
   status: "idle",
 };
 
@@ -40,5 +41,7 @@ export const birdSlice = createSlice({
   },
 });
 
-export const selectBirdsArray = (state: State) => state.birdsArray;
-export const selectUserLocation = (state: State) => state.userLocation;
+export const selectBirdsArray = (state: RootState) => state.birds.birdsArray;
+export const selectUserLocation = (state: RootState) =>
+  state.birds.userLocation;
+export default birdSlice.reducer;
