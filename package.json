@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "bird-watch-client",
+  "version": "0.2.0",
   "private": true,
   "proxy": "http://localhost:6006/",
   "dependencies": {
