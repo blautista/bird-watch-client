@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/birds" element={<MainPage />} />
-          <Route path="/birds/details" element={<BirdDetails />} />
+          <Route path="/birds/:birdSciName" element={<BirdDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

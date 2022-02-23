@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Bird } from "../../types/Bird";
 import {
   Card,
@@ -14,10 +15,16 @@ type Props = {
 };
 
 const BirdCard = ({ birdData }: Props) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/birds/${birdData.birdSciName}`);
+  };
+
   return (
     <ImageListItem key={birdData.birdSciName}>
       <Card>
-        <CardActionArea>
+        <CardActionArea onClick={handleCardClick}>
           {birdData.wikiInfo && (
             <CardMedia
               component="img"
