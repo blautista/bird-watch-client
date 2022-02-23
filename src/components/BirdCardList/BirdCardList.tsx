@@ -1,21 +1,23 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { ImageList } from "@mui/material";
 import { Bird } from "../../types/Bird";
 import BirdCard from "../BirdCard/BirdCard";
+import { getImageListColumnsByViewportWidth } from "../../utils";
 
 type Props = {
   birdsArray: Bird[];
 };
 
 const BirdCardList = ({ birdsArray }: Props) => {
+  const imageListCols = getImageListColumnsByViewportWidth();
+  const handleBirdClick = () => {};
+
   return (
-    <Grid container spacing={2} justifyContent="center">
+    <ImageList variant="masonry" cols={imageListCols} gap={4}>
       {birdsArray.map((bird) => (
-        <Grid item xs={12} sm={4} md={4} lg={4} xl={3}>
-          <BirdCard birdData={bird} />
-        </Grid>
+        <BirdCard birdData={bird} onClick={handleBirdClick} />
       ))}
-    </Grid>
+    </ImageList>
   );
 };
 

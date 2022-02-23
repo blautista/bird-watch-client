@@ -6,28 +6,32 @@ import {
   CardContent,
   CardActionArea,
   Typography,
+  ImageListItem,
 } from "@mui/material";
 type Props = {
   birdData: Bird;
+  onClick: Function;
 };
 
 const BirdCard = ({ birdData }: Props) => {
   return (
-    <Card>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          width="100%"
-          image={birdData.wikiInfo.image}
-          alt={birdData.birdSciName}
-        ></CardMedia>
-        <CardContent>
-          <Typography variant="h3">{birdData.birdName}</Typography>
-          <Typography variant="h6">{birdData.birdSciName}</Typography>
-          <Typography variant="body2">{birdData.wikiInfo.summary}</Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <ImageListItem key={birdData.birdSciName}>
+      <Card>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            width="100%"
+            image={birdData.wikiInfo.image}
+            alt={birdData.birdSciName}
+          ></CardMedia>
+          <CardContent>
+            <Typography variant="h3">{birdData.birdName}</Typography>
+            <Typography variant="subtitle2">{birdData.birdSciName}</Typography>
+            {/* <Typography variant="body1">{birdData.wikiInfo.summary}</Typography> */}
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </ImageListItem>
   );
 };
 
