@@ -34,7 +34,7 @@ const BirdCard = ({ birdData }: Props) => {
             ></CardMedia>
           )}
           <CardContent>
-            <Typography variant="h3">{birdData.birdName}</Typography>
+            <Typography variant="h4">{birdData.birdName}</Typography>
             <Typography variant="subtitle2">{birdData.birdSciName}</Typography>
             {/* <Typography variant="body1">{birdData.wikiInfo.summary}</Typography> */}
           </CardContent>
