@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-
+import "@fontsource/montserrat";
 declare module "@mui/material/styles" {
   interface ThemeOptions {
     [key: string]: any; //
@@ -20,7 +20,7 @@ const muiTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Helvetica", "Arial", sans-serif',
+    fontFamily: '"Montserrat","Helvetica", "Arial", sans-serif',
   },
 });
 
