@@ -14,8 +14,12 @@ const BirdCardList = ({ birdsArray }: Props) => {
 
   return (
     <ImageList variant="masonry" cols={imageListCols} gap={4}>
-      {birdsArray.map((bird) => (
-        <BirdCard birdData={bird} onClick={handleBirdClick} />
+      {birdsArray.map((bird: Bird) => (
+        <BirdCard
+          key={bird.birdSciName}
+          birdData={bird}
+          onClick={handleBirdClick}
+        />
       ))}
     </ImageList>
   );
