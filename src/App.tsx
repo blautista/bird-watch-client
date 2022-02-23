@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<WelcomeScreen />} />
-          {/* <Route path="/birds" element={<MainPage />} /> */}
-          <Route path="/birds" element={<BirdDetails />} />
+          <Route path="/birds" element={<MainPage />} />
+          <Route path="/birds/details" element={<BirdDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
