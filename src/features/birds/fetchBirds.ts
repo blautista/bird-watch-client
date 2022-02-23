@@ -11,6 +11,6 @@ export const fetchBirds = async (coords: {lat: number, lng: number}) => {
     // }));
     return data;
   } catch (error: any) {
-    return new Error('There was an issue fetching the data');
+    return null;
   }
 };
