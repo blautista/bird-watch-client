@@ -34,7 +34,7 @@ const BirdCard = ({ birdData }: Props) => {
             <CardMedia
               component="img"
               width="100%"
-              image={birdData.wikiInfo.image}
+              image={birdData.wikiInfo.thumbnail}
               alt={birdData.birdSciName}
             ></CardMedia>
           )}
