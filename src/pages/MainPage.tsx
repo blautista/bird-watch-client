@@ -49,19 +49,20 @@ const MainPage = (props: Props) => {
         )}
       </BirdDetailsHeader>
       <Grid item maxWidth={1200} m={1}>
-        {birdsArray ? (
-          <BirdCardList birdsArray={birdsArray} />
-        ) : isLoading === "loading" ? (
+        {birdsArray && <BirdCardList birdsArray={birdsArray} />}
+        {!birdsArray && isLoading === "idle" && (
+          <Typography variant="h5">Please activate your location</Typography>
+        )}
+        {isLoading === "loading" && (
           <>
             <CircularProgress />
             <Typography variant="h5">Fetching birds near you...</Typography>
           </>
-        ) : (
-          <Typography variant="h5">
-            There was a problem fetching the birds. Please refresh the page and
-            try again.
-          </Typography>
         )}
+        {isLoading === "fail" && (
+          <Typography variant="h5">Server error</Typography>
+        )}
+        {error && <Typography variant="h5">{error}</Typography>}
       </Grid>
     </Grid>
   );
